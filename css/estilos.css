@@ -1,0 +1,25 @@
+
+.h1{
+    height: 10vh;
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+}
+
+.pics{
+    margin: 100px;
+    width: 300px;
+}
+
+.cuerpo{
+    margin: 100px;
+}
+
+.card1{
+    margin: 90px;
+    padding: 30;
+}
+
+.text{
+    align-items: center;
+}
