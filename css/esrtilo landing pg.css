@@ -2,29 +2,74 @@
     padding: 0;
     box-sizing: border-box;
     margin: 0;
+    text-decoration: none;
 }
 
-.navbar {
-    background-color: grey;
-    border: 1px solid black;
+/* NAVBAR */
+
+nav {
+    background-color: #404040;
     height: 50px;
-}
-
-.navbaar-p {
-    padding-top: 5px;
-    margin: 10px;
-    color: rgb(183, 248, 226);
-}
-
-.imagen {
-    height: 700px;
-    padding: 10px;
     width: 100%;
+
+}
+
+label.logo {
+    line-height: 50px;
+    margin-left: 100px;
+    color: #D9D9D9;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: #D9D9D9; 
+    font-size: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 8px 15px;
+    border-radius: 3px;
+}
+
+a.active, a:hover{
+    background: #262524;
+}
+
+
+
+/* HERO */
+
+.heroimage {
+    height: 700px;
+    width: 100%;
+    display: flex;
+    background-image: url("https://ideogram.ai/assets/image/lossless/response/4AvpkLJ_R8Oe-nOF7cwAkw");
+    background-size: 78%;
+    background-position: center;
+}
+
+.herotext {
+    color: rgb(85, 145, 125);
+    width: 30%;
+    padding: 100px 170px;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
 }
 
 h2 {
-    color: rgb(183, 248, 226);
-    background-color: grey;
+    color: #5FF0C9;
+    background-color: #727273;
     display: flex;
     justify-content: center;
     padding: 10px;
@@ -54,10 +99,13 @@ background-color: rgb(255, 255, 255);
 
 #cardcarrusel-3 {
     background-color: rgb(255, 255, 255);
+    align-items: center;
+    display: flex;
 
 }
 
 .itemcarrusel {
+
 position: relative;
 height: 400px;
 }
@@ -83,6 +131,10 @@ height: 400px;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
+}
+
+#styleservicio {
+margin: 30px;
 }
 
 .tarjeta {
@@ -128,10 +180,26 @@ height: 400px;
     padding: 20px;
 }
 
-.footer{
+footer{
+    background-color: #262524;
+}
+
+.footerCont {
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
 
 }
 
-li {
-    height: 50px;
+.socialIcons a{
+    padding: 10px;
+    background-color: #727273;
+    margin: 10px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
 }
+

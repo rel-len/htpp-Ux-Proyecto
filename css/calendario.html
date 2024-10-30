@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendario Desplegable</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calendar-container">
+    <input type="checkbox" id="toggle-calendar" class="toggle-calendar" />
+    <label for="toggle-calendar" class="toggle-label">Reservar Fecha</label>
+
+    <div class="calendar">
+      <div class="month">
+        <h2>Octubre 2024</h2>
+      </div>
+      <div class="weekdays">
+        <div>Dom</div><div>Lun</div><div>Mar</div><div>Mié</div><div>Jue</div><div>Vie</div><div>Sáb</div>
+      </div>
+      <div class="days">
+        <div></div><div></div><div></div><div></div><div></div><div></div> <!-- Espacios vacíos antes del día 1 -->
+        <!-- Días del mes -->
+        <label><input type="checkbox" /><span>1</span></label>
+        <label><input type="checkbox" /><span>2</span></label>
+        <label><input type="checkbox" /><span>3</span></label>
+        <label><input type="checkbox" /><span>4</span></label>
+        <label><input type="checkbox" /><span>5</span></label>
+        <label><input type="checkbox" /><span>6</span></label>
+        <label><input type="checkbox" /><span>7</span></label>
+        <!-- Continúa hasta el día 31... -->
+      </div>
+    </div>
+  </div>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    .calendar-container {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    /* Estilo para el botón desplegable */
+    .toggle-label {
+      display: block;
+      background-color: #5C4033;
+      color: #fff;
+      text-align: center;
+      padding: 12px;
+      cursor: pointer;
+      border-radius: 8px;
+      font-size: 1.2em;
+      margin-bottom: 8px;
+    }
+
+    /* Oculta el checkbox de despliegue */
+    .toggle-calendar {
+      display: none;
+    }
+
+    /* Hace que el calendario se despliegue o se oculte */
+    .calendar {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .toggle-calendar:checked ~ .calendar {
+      max-height: 600px; /* Altura máxima para mostrar el calendario completo */
+    }
+
+    /* Estilos del calendario */
+    .month {
+      text-align: center;
+      background-color: #5C4033;
+      color: #fff;
+      padding: 16px;
+    }
+
+    .weekdays, .days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+    }
+
+    .weekdays div {
+      text-align: center;
+      padding: 10px;
+      background-color: #A52A2A;
+      color: #fff;
+    }
+
+    .days label {
+      text-align: center;
+      cursor: pointer;
+      display: inline-block;
+      padding: 10px;
+      border-radius: 4px;
+      background-color: #f0ead6;
+      transition: background-color 0.3s ease;
+    }
+
+    .days label span {
+      pointer-events: none;
+      color: #333;
+    }
+
+    .days input[type="checkbox"] {
+      display: none;
+    }
+
+    .days input[type="checkbox"]:checked + span {
+      background-color: #00A693;
+      color: #fff;
+      padding: 10px;
+      border-radius: 4px;
+      display: block;
+    }
+
+    /* Diseño responsivo */
+    @media (max-width: 480px) {
+      .calendar-container {
+        width: 90%;
+      }
+
+      .month h2 {
+        font-size: 1.2em;
+      }
+
+      .toggle-label {
+        font-size: 1em;
+        padding: 10px;
+      }
+
+      .days label {
+        padding: 8px;
+      }
+    }
+  </style>
+</body>
+</html>

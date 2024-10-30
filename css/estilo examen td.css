@@ -1,0 +1,469 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+}
+
+nav {
+    background-color: #00A693;
+    height: 50px;
+    width: 100%;
+
+}
+
+label.logo {
+    line-height: 50px;
+    margin-left: 100px;
+    color: #F0EAD6;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: #F0EAD6; 
+    font-size: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 8px 15px;
+    border-radius: 3px;
+}
+
+a.active, a:hover{
+    color: #D4AF37;
+    background: #5C4033;
+}
+
+/* SECONDARY CONTENT */
+
+.secondary-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+    background-color: #F0EAD6;
+}
+
+.card {
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    background-color: #00A693;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.icon{
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #D4AF37; /* Color marrón */
+}
+
+.card h3 {
+    font-size: 1.4em;
+    color: #F0EAD6;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    color: #F0EAD6;
+    line-height: 1.6;
+}
+
+  /* Diseño responsivo */
+@media (max-width: 768px) {
+    .secondary-content {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .card {
+    width: 90%;
+    }
+}
+
+/* HERO */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    background-image: url("https://ideogram.ai/assets/image/lossless/response/vQ1WI80yTIaLuxg952n2iQ"); /* Reemplaza con la URL de tu imagen */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px 300px;
+    background: rgba(0, 0, 0, 0.4); /* Oscurece la imagen de fondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    color: #D4AF37;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3em;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h2 {
+color: #F0EAD6;
+}
+
+  /* Diseño responsivo */
+@media (max-width: 768px) {
+    .hero {
+    height: 50vh;
+    }
+
+    .hero h1 {
+    font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+    font-size: 1.5em;
+    padding: 0 10px;
+    }
+}
+
+/* BANER BENEFICIOS */
+
+.benefits-banner {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: #00A693;
+    color: #F0EAD6;
+    text-align: center;
+}
+
+.banner-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.banner-content h2 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #e0f0ed;
+}
+
+.benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.benefit-item {
+    background-color: #A52A2A;
+    border-radius: 8px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-item h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #D4AF37;
+  }
+
+  .benefit-item p {
+    font-size: 1em;
+    color: #F0EAD6;
+    line-height: 1.6;
+  }
+
+  /* Diseño responsivo */
+  @media (max-width: 768px) {
+    .benefits {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .benefit-item {
+      width: 90%;
+    }
+  }
+
+
+  /* CARRUSEL */
+
+
+.carousel {
+    width: 100%;
+    height: 300px;
+background-color: #F0EAD6;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel__images {
+    display: flex;
+    width: 100%;
+    animation: slide 16s infinite;
+}
+
+.carousel__images img {
+    width: 100%;
+    flex: 1 0 100%;
+    transition: opacity 0.5s ease;
+    width: 600px;
+    height: 740px;
+    line-height: 20px;
+    opacity: 80%;
+    padding: 20px 10px;
+
+}
+
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    20% { transform: translateX(0%); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); }
+    100% { transform: translateX(0%); }
+}
+
+
+
+    /* Estilos responsivos */
+@media (max-width: 768px) {
+    .carousel {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .carousel__images img {
+        height: 200px; /* Ajusta la altura en pantallas pequeñas */
+        object-fit: cover; /* Mantiene la proporción de las imágenes */
+    }
+}
+
+
+/* CALENDARIO DESPLEGABLE */
+.seccionCalendario {
+    height: 500px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://img.freepik.com/vector-premium/patron-vectorial-sobre-cultura-maya-colores-brillantes_435341-8.jpg?w=1060");
+
+    
+}
+
+.calendar-container {
+    background-color: #00A693;
+    padding: 20px 50px;
+    width: 100%;
+
+}
+
+  /* Estilo para el botón desplegable */
+.toggle-label {
+    display: block;
+    background-color: #5C4033;
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+  /* Oculta el checkbox de despliegue */
+.toggle-calendar {
+    display: none;
+}
+
+  /* Hace que el calendario se despliegue o se oculte */
+.calendar {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-calendar:checked ~ .calendar {
+    max-height: 600px; /* Altura máxima para mostrar el calendario completo */
+}
+
+  /* Estilos del calendario */
+.month {
+    text-align: center;
+    background-color: #5C4033;
+    color: #fff;
+    padding: 16px;
+}
+
+.weekdays, .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.weekdays div {
+    text-align: center;
+    padding: 10px;
+    background-color: #A52A2A;
+    color: #fff;
+}
+
+.days label {
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f0ead6;
+    transition: background-color 0.3s ease; 
+}
+
+.days label span {
+    pointer-events: none;
+    color: #333;
+}
+
+.days input[type="checkbox"] {
+    display: none;
+}
+
+.days input[type="checkbox"]:checked + span {
+    background-color: #00A693;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    display: block;
+}
+
+/* Diseño responsivo del calendario*/
+@media (max-width: 480px) {
+    .calendar-container {
+    width: 90%;
+    }
+
+    .month h2 {
+    font-size: 1.2em;
+    }
+
+    .toggle-label {
+    font-size: 1em;
+    padding: 10px;
+    }
+
+    .days label {
+    padding: 8px;
+    }
+}
+
+/* FOOTER */
+
+footer{
+    background-color: #262524;
+}
+
+.footerCont {
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+
+}
+
+.socialIcons a{
+    padding: 10px;
+    background-color: #F0EAD6;
+    margin: 10px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+}
+
+.socialIcons a i {
+font-size: 2em;
+color: #5C4033;
+opacity: 0.9;
+}
+
+.socialIcons a:hover {
+    background-color: #262524;
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i {
+    color: #D4AF37;
+    transition: 0.5s;
+}
+
+.footerNav{
+    margin: 30px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+}
+
+.footerNav ul li {
+    color: #D4AF37;
+    margin: 20px;
+    display: inline-block;
+}
